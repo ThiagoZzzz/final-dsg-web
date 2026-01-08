@@ -1,0 +1,83 @@
+/* Contenedor Principal: La "Tarjeta" redondeada */
+.hero-section {
+    display: flex;             /* Mantiene los lados izquierdo y derecho alineados */
+    position: relative;        /* CRUCIAL: Para que el reloj flotante se ubique respecto a esto */
+    width: 95%;
+    max-width: 1200px;
+    height: 500px;             /* Altura fija o min-height para dar presencia */
+    margin: 100px auto;        /* Centrado en la página con margen arriba (por el navbar) */
+    border-radius: 30px;       /* Bordes redondeados como en la referencia */
+    overflow: hidden;          /* Recorta las esquinas de las imágenes internas */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* --- Lado Izquierdo (Texto) --- */
+.hero-data {
+    flex: 0.45;               /* Ocupa el 45% del ancho */
+    background-color: #a0a0a0; /* Color rosa viejo/mauve tomado de tu referencia */
+    color: white;
+    padding: 3rem 3rem 3rem 4rem; /* Padding extra a la derecha para no chocar con el reloj */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* Centra el texto verticalmente */
+    z-index: 1;                /* Asegura que el fondo quede detrás del reloj */
+}
+
+.hero-data h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-data p {
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 300px;          /* Limita el ancho del texto para que se vea elegante */
+}
+
+/* --- Lado Derecho (Imagen Runner) --- */
+.hero-media {
+    flex: 0.55;               /* Ocupa el 55% restante */
+    position: relative;
+}
+
+.hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* Hace que la imagen llene el espacio sin deformarse */
+    display: block;
+}
+
+/* --- EL TRUCO: Reloj Flotante --- */
+.hero-product {
+    position: absolute;       /* Se libera del flujo normal */
+
+    /* Centrado en la unión de los dos colores */
+    left: 55%;                /* Lo empujamos hacia la línea divisoria (ajusta este % según necesites) */
+    top: 50%;                 /* Lo bajamos a la mitad vertical */
+    transform: translate(-50%, -50%); /* Lo centramos perfectamente en su propio eje */
+
+    height: 85%;              /* Tamaño del reloj relativo al contenedor */
+    width: auto;              /* Mantiene la proporción */
+    z-index: 10;              /* ¡Importante! Pone el reloj ENCIMA de todo lo demás */
+    filter: drop-shadow(10px 10px 20px rgba(0,0,0,0.3)); /* Sombra realista para que "flote" */
+}
+
+/* Responsividad básica: Si la pantalla es chica, cambiamos el diseño */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column-reverse; /* Apila uno sobre otro en móviles */
+        height: auto;
+    }
+    .hero-product {
+        position: absolute; /* Deja de flotar */
+        left: 50%;                /* Lo empujamos hacia la línea divisoria (ajusta este % según necesites) */
+        top: 20%;                 /* Lo bajamos a la mitad vertical */
+        transform: translate(-50%, -50%); /* Lo centramos perfectamente en su propio eje */
+        height: 300px;
+        margin: 50px auto;
+        display: block;
+        z-index: 10;
+    }
+}

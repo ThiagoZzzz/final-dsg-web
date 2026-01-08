@@ -1,0 +1,15 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    /* TRUCO: Fondo de cuadrícula (Grid) hecho con CSS puro */
+    background-color: #ffffff;
+    background-image:
+        linear-gradient(#f0f0f0 1px, transparent 1px),
+        linear-gradient(90deg, #f0f0f0 1px, transparent 1px);
+    background-size: 24px 24px;
+    color: #333;
+}

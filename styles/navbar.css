@@ -1,0 +1,78 @@
+header {
+    height: 5vh;
+}
+
+/* --- Modificaciones al .navbar --- */
+.navbar {
+    /* Cambiamos a columna para apilar: (Barra superior) + (Menú desplegable) */
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    max-width: 300px;
+    padding: 0 1rem;
+/* rgba(10, 1, 1, 0.171) */
+    background: rgba(77, 72, 72, 0.425);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px; /* Un poco menos redondeado para acomodar el menú */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 1s ease-in-out; /* Transición suave del fondo */
+}
+
+.nav-top {
+    width: 100%;
+    height: 60px; /* Definimos una altura fija para la barra visual */
+    display: flex;
+    justify-content: space-between; /* AHORA SÍ: Reparte espacio entre 3 elementos */
+    align-items: center;
+}
+
+.nav-top img {
+    width: 30px;
+}
+
+/* Ajustes de alineación interna */
+.nav-item {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    cursor: pointer;
+}
+
+.nav-item.logo { justify-content: center; }
+.nav-item:last-child { justify-content: flex-end; }
+
+
+/* --- Estilos del Menú (Casi igual, solo pequeños ajustes) --- */
+.menu-list {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    transition: max-height 1s ease-in, opacity 0.5s ease;
+}
+
+/* --- Lógica del Toggle --- */
+#menu-toggle:checked ~ .menu-list {
+    max-height: 300px;
+    opacity: 1;
+    padding-bottom: 20px; /* Espacio al final del menú desplegado */
+    border-top: 1px solid rgba(0,0,0,0.05);
+    margin-top: 10px;
+}
+
+/* Responsividad básica: Si la pantalla es chica, cambiamos el diseño */
+@media (max-width: 768px) {
+    .navbar {
+        min-width: 70vw;
+    }
+}

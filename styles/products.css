@@ -1,0 +1,99 @@
+/* --- Contenedor del Grid (La Rejilla) --- */
+.product-grid {
+    display: grid;
+    /* Esto crea columnas automáticas que nunca bajan de 300px */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem; /* Espacio entre tarjetas */
+    padding: 4rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* --- Estilo de la Tarjeta --- */
+.product-card {
+    background-color: #f9f9f9; /* Color gris muy claro de fondo */
+    border-radius: 20px;       /* Bordes muy redondeados */
+    padding: 1.5rem;
+
+    /* Flexbox para distribuir verticalmente el contenido */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja cabecera arriba y pie abajo */
+
+    min-height: 450px; /* Altura mínima para uniformidad */
+    height: 600px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Efecto Hover sutil */
+.product-card:hover {
+    transform: translateY(-5px); /* Se levanta un poco */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.200);
+}
+
+/* --- 1. Cabecera (Variante + Badge) --- */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1rem;
+}
+
+.badge-new {
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 2px 8px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #333;
+    text-transform: uppercase;
+}
+
+/* --- 2. Imagen --- */
+.card-image {
+    flex: 1; /* Ocupa todo el espacio disponible en el centro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+
+}
+
+.card-image img {
+    max-width: 700px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1)); /* Sombra a la imagen */
+}
+
+/* --- 3. Pie (Info + Precio) --- */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; /* Alinea el precio abajo con el texto */
+    border-top: 1px solid transparent; /* Reserva espacio si quieres agregar línea */
+}
+
+.product-info h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 0.3rem;
+}
+
+.product-info p {
+    font-size: 0.85rem;
+    color: #999;
+    max-width: 200px; /* Para que el texto salte de línea si es largo */
+    line-height: 1.4;
+}
+
+.product-price {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111;
+    white-space: nowrap; /* Evita que el precio se parta */
+}
