@@ -13,3 +13,19 @@ body {
     background-size: 24px 24px;
     color: #333;
 }
+
+.contact-us {
+    /* background-color: red; */
+}
+
+.contact-card {
+    min-height: 60vh;
+    padding: 2.5rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: #dae8eb;
+    background: radial-gradient(circle, rgba(218, 232, 235, 1) 0%, rgba(233, 238, 240, 1) 100%);
+
+}

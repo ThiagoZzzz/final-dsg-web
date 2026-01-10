@@ -29,13 +29,17 @@ body {
 
 /* --- Efecto card Sign-up pages--- */
 .card-body-wrapper {
-    background-color: #b9b8b8;
-    padding: 4rem;
+    background: rgba(247, 240, 240, 0.589);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.767);
+    padding: 1rem;
     z-index: -100;
 }
 
 /* --- Cuerpo de la Tarjeta --- */
 .card-body {
+    background-color: white;
+    border-radius: 8px;
     padding: 2.5rem;
 }
 
