@@ -1,0 +1,108 @@
+/* --- Cuerpo de la Tarjeta --- */
+.card-body {
+    min-height: 60vh;
+    min-width: 60vw;
+    background-color: rgb(255, 255, 255);
+    padding: 2.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.brand-name {
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #111;
+}
+
+.login-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #111;
+}
+
+.login-subtitle {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* --- Inputs --- */
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.input-group input, textarea{
+    resize: none;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.2s;
+    background-color: #fff;
+}
+
+.input-group input:focus, textarea:focus {
+    border-color: #3b82f6; /* Azul al hacer clic */
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+textarea {
+    min-height: 20vh;
+}
+
+/* --- Botón Principal --- */
+.btn-primary {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 0.5rem;
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+}
+
+/* Notebook */
+@media (max-width: 1200px) {
+    .card-body{
+        min-width: 50vw;
+        border-bottom-right-radius: 24px;
+        border-bottom-left-radius: 24px;
+    }
+ }
+
+/* Tablet */
+@media (max-width: 992px) {
+    .card-body{
+        min-height: 40vh;
+        min-width: 50vw;
+        border-bottom-right-radius: 24px;
+        border-bottom-left-radius: 24px;
+    }
+ }
+
+ /* Celular */
+ @media (max-width: 768px) {
+    .card-body{
+        min-width: 80vw;
+    }
+}

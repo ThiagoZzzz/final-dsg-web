@@ -6,7 +6,7 @@ body {
     gap: 5rem;
     align-items: center;
 
-    /* TRUCO: Fondo de cuadrícula (Grid) hecho con CSS puro */
+    /* fondo de cuadrícula */
     background-color: #ffffff;
     background-image:
         linear-gradient(#f0f0f0 1px, transparent 1px),
@@ -19,21 +19,19 @@ body {
 .login-card {
     background: white;
     width: 100%;
-    max-width: 400px; /* Ancho máximo similar a la referencia */
+    max-width: 400px;
     border-radius: 12px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
                 0 2px 4px -1px rgba(0, 0, 0, 0.06),
                 0 0 0 1px rgba(0,0,0,0.05);
-    overflow: hidden; /* Para que el footer no se salga de los bordes redondeados */
+    overflow: hidden;
 }
 
 /* --- Efecto card Sign-up pages--- */
 .card-body-wrapper {
-    background: rgba(247, 240, 240, 0.589);
+    background: #3b83f634;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.767);
-    padding: 1rem;
-    z-index: -100;
+    padding: .5rem;
 }
 
 /* --- Cuerpo de la Tarjeta --- */
@@ -88,7 +86,7 @@ body {
 }
 
 .input-group input:focus {
-    border-color: #3b82f6; /* Azul al hacer clic */
+    border-color: #3b82f6;
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
@@ -96,7 +94,7 @@ body {
 .btn-primary {
     width: 100%;
     padding: 0.75rem;
-    background-color: #3b82f6; /* Azul brillante similar a la imagen */
+    background-color: #3b82f6;
     color: white;
     border: none;
     border-radius: 6px;
@@ -113,7 +111,7 @@ body {
 
 /* --- Footer de la Tarjeta --- */
 .card-footer {
-    background-color: #f9fafb; /* Gris muy clarito */
+    background-color: #f9fafb;
     border-top: 1px solid #e5e7eb;
     padding: 1.5rem;
     text-align: center;
@@ -129,14 +127,4 @@ body {
 
 .link-signup:hover {
     text-decoration: underline;
-}
-
-.secured-by {
-    margin-top: 1rem;
-    font-size: 0.75rem;
-    color: #9ca3af;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
 }

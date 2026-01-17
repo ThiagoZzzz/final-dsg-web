@@ -1,8 +1,7 @@
-body {
+.contact-us {
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
     /* TRUCO: Fondo de cuadrícula (Grid) hecho con CSS puro */
@@ -14,14 +13,73 @@ body {
     color: #333;
 }
 
+
+/* Celulares */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Ocultar menú desktop */
+    }
+    /* Aquí activas tu menú hamburguesa y pones todo en 1 columna */
+    .columna {
+        width: 100%;
+    }
+}
+
 .contact-card {
     min-height: 60vh;
-    padding: 2.5rem;
-    border-radius: 8px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    background: #dae8eb;
-    background: radial-gradient(circle, rgba(218, 232, 235, 1) 0%, rgba(233, 238, 240, 1) 100%);
+    gap: 3rem;
+    background: radial-gradient(circle at 20% 20%, var(--card-bg-start), var(--card-bg-end) 70%);
+    padding: 2.5rem; /* Padding extra abajo para compensar la falta de botón */
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    color: var(--text-light);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
 
+.info-title {
+    font-family: 'Merriweather', serif; /* Fuente Serif para destacar */
+    font-size: 1.5rem;
+    font-weight: 300; /* Peso ligero para elegancia */
+    margin: .5rem 0 0 0; /* Espacio superior para separarlo */
+    color: var(--text-light);
+    letter-spacing: -0.02em;
+}
+
+.info-text {
+    color: var(--text-light);
+    margin: 1rem 0;
+    line-height: 1.4;
+}
+
+/* Notebooks */
+@media (max-width: 1200px) {
+    .contact-card{
+        gap: .5rem
+    }
+ }
+
+/* Tablets */
+@media (max-width: 992px) {
+    .contact-us{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-card{
+        min-height: 20vh;
+        width: 50vw;
+        border-top-left-radius: 24px;
+        border-top-right-radius: 24px;
+        border-bottom-left-radius: 0px;
+    }
+ }
+
+ /* Celular */
+ @media (max-width: 768px) {
+    .contact-card{
+        min-width: 80vw;
+    }
 }

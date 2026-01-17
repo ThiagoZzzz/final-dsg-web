@@ -1,3 +1,13 @@
+:root {
+    --card-bg-start: #3b83f6ab;
+    --card-bg-end: #1c3355dc;
+    --text-light: #ffffff;
+    --text-dim: #a0a9b8;      /* color para descripciones */
+    --badge-bg: rgba(255, 255, 255, 0.15);
+    --hero-bg-start: #456f9e;;
+    --hero-bg-end: #233549;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,7 +16,6 @@
 }
 
 body {
-    /* Altura extra para que puedas probar el scroll */
     min-height: 100vh;
     background-color: rgb(255, 255, 255);
 }
@@ -22,22 +31,3 @@ a {
     font-size: 1.1rem;
     padding: 5px 0;
 }
-
-/* TU CSS ACTUAL (Escritorio) VA AQUÍ ARRIBA */
-
-/* Laptops pequeñas */
-/* @media (max-width: 1200px) { ... } */
-
-/* Tablets */
-/* @media (max-width: 992px) { ... } */
-
-/* Celulares */
-/* @media (max-width: 768px) {
-    .navbar {
-        display: none; /* Ocultar menú desktop */
-    /* } */
-    /* Aquí activas tu menú hamburguesa y pones todo en 1 columna */
-    /* .columna {
-        width: 100%;
-    }
-} */

@@ -1,7 +1,6 @@
-/* --- Contenedor del Grid (La Rejilla) --- */
+/* --- Contenedor --- */
 .product-grid {
     display: grid;
-    /* Esto crea columnas automáticas que nunca bajan de 300px */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem; /* Espacio entre tarjetas */
     padding: 4rem 5%;
@@ -9,16 +8,16 @@
     margin: 0 auto;
 }
 
-/* --- Estilo de la Tarjeta --- */
+/* --- Estilo de la card --- */
 .product-card {
-    background-color: #f9f9f9; /* Color gris muy claro de fondo */
-    border-radius: 20px;       /* Bordes muy redondeados */
+    background-color: #f9f9f9;
+    border-radius: 20px;
     padding: 1.5rem;
 
     /* Flexbox para distribuir verticalmente el contenido */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Empuja cabecera arriba y pie abajo */
+    justify-content: space-between;
 
     min-height: 450px; /* Altura mínima para uniformidad */
     height: 600px;
@@ -26,13 +25,12 @@
     cursor: pointer;
 }
 
-/* Efecto Hover sutil */
 .product-card:hover {
-    transform: translateY(-5px); /* Se levanta un poco */
+    transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.200);
 }
 
-/* --- 1. Cabecera (Variante + Badge) --- */
+/* --- 1. Header --- */
 .card-header {
     display: flex;
     justify-content: space-between;
@@ -54,7 +52,7 @@
 
 /* --- 2. Imagen --- */
 .card-image {
-    flex: 1; /* Ocupa todo el espacio disponible en el centro */
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,16 +64,43 @@
     max-width: 700px;
     height: auto;
     object-fit: contain;
-    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1)); /* Sombra a la imagen */
+    filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
 }
 
-/* --- 3. Pie (Info + Precio) --- */
+/* --- 3. Pie --- */
 .card-footer {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end; /* Alinea el precio abajo con el texto */
-    border-top: 1px solid transparent; /* Reserva espacio si quieres agregar línea */
+    align-items: flex-end;
+    border-top: 1px solid transparent;
 }
+
+/* container button & price */
+.end-box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cart-button {
+    padding: 4px;
+    background: radial-gradient(circle at 20% 20%, var(--hero-bg-start), var(--hero-bg-end) 70%);
+    border-radius: 8px;
+    transition: all .3s;
+}
+
+.cart-button:hover {
+    transition: all .3s;
+    background: radial-gradient(circle at 20% 20%, var(--card-bg-start), #0e4399ab 70%);
+    transform: scale(1.1);
+}
+
+.cart-button > img {
+    height: 3vh;
+    padding: 0;
+    margin: 0;
+}
+
 
 .product-info h3 {
     font-size: 1.1rem;
@@ -87,13 +112,13 @@
 .product-info p {
     font-size: 0.85rem;
     color: #999;
-    max-width: 200px; /* Para que el texto salte de línea si es largo */
+    max-width: 200px;
     line-height: 1.4;
 }
 
 .product-price {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #111;
-    white-space: nowrap; /* Evita que el precio se parta */
+    white-space: nowrap;
 }

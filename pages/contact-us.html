@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>STEEL - Contact us</title>
+    <link rel="shortcut icon" href="/public/logo2.png" type="image/x-icon">
     <link rel="stylesheet" href="../styles/contact-us.css">
+    <link rel="stylesheet" href="../styles/contact-form.css">
     <link rel="stylesheet" href="../styles/navbar.css">
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../styles/style.css">
@@ -42,19 +44,34 @@
     <section class="contact-us">
         <div class="contact-card">
             <div class="info-row">
-                <h3>Visit us</h3>
-                <p>Av. Catamarca 2501</p>
+                <h3 class="info-title">Visit us</h3>
+                <p class="info-text">Av. Catamarca 2501</p>
             </div>
 
             <div class="info-row">
-                <h3>Chat to us</h3>
-                <p>Av. Catamarca 2501</p>
+                <h3 class="info-title">Chat to us</h3>
+                <p class="info-text">+54 0926-7533</p>
             </div>
+        </div>
 
-            <div class="info-row">
-                <h3>Visit us</h3>
-                <p>Av. Catamarca 2501</p>
-            </div>
+        <div class="card-body">
+            <div class="brand-name">CONTACT US</div>
+
+            <p class="login-subtitle">Send us an email.</p>
+
+            <form class="login-form">
+                 <div class="input-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" placeholder="Enter your contact email " required>
+                </div>
+
+                <div class="input-group">
+                    <label for="msg">Message</label>
+                    <textarea  id="msg" placeholder="Enter your message" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">Send &rarr;</button>
+            </form>
         </div>
     </section>
 </main>
